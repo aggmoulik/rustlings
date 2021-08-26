@@ -1,7 +1,7 @@
 // modules2.rs
 // Make me compile! Execute `rustlings hint modules2` for hints :)
 
-// I AM NOT DONE
+// I AM DONE
 
 mod delicious_snacks {
     use self::fruits::PEAR as fruit;
@@ -16,12 +16,20 @@ mod delicious_snacks {
         pub const CUCUMBER: &'static str = "Cucumber";
         pub const CARROT: &'static str = "Carrot";
     }
+
+    pub fn getFruit() -> String{
+        self::fruit.to_string()
+    }
+
+    pub fn getVeggie() -> String{
+        self::veggie.to_string()
+    }
 }
 
 fn main() {
     println!(
         "favorite snacks: {} and {}",
-        delicious_snacks::fruit,
-        delicious_snacks::veggie
+        delicious_snacks::getFruit(),
+        delicious_snacks::getVeggie()
     );
 }
